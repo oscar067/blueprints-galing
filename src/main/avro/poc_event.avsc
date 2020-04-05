@@ -1,0 +1,85 @@
+{
+  "type": "record",
+  "name": "Event",
+  "namespace": "ocp.bluprints.echo",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "GUID (UUID) of the event in order to make it globally identificable."
+    },
+    {
+      "name": "traceId",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "Identifier which is set to a number of events that belong to the same context (tree of execution)"
+    },
+    {
+      "name": "created",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "Time when the event was originally created in the source in ISO 8601 in UTC"
+    },
+    {
+      "name": "ldd",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "Logical Data Domain for the event"
+    },
+    {
+      "name": "source",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "The source system hostname of the message producer"
+    },
+    {
+      "name": "version",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "The version of the event definition"
+    },
+    {
+      "name": "confidentiality",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "Confidentiality level (1..4) of the information contained in the event"
+    },
+    {
+      "name": "filter",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "doc": "The category of the event to allow a quick filtering in the transport layer"
+    },
+    {
+      "name": "personId",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "doc": "The category of the event to allow a quick filtering in the transport layer"
+    }
+  ]
+}

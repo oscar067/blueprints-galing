@@ -1,0 +1,7 @@
+/gatlin-test.iml
+/gatlintest.iml
+/read.me
+/.idea/
+/target/
+/src/test/resources/ssl/Trust123456.jks
+/src/test/resources/ssl/KeystoreDev2-123456.jks
